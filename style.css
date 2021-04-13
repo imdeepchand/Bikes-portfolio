@@ -1,0 +1,861 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+* {
+    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #362c2c;
+    background-size: cover;
+    background-position: center center;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* --------navbar--------------- */
+
+nav {
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 5px 20px;
+    background-color: #220e0e36;
+    z-index: 1;
+}
+
+nav h1 {
+    width: 25%;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.lightblue {
+    color: #62cafa;
+}
+
+.btnRM a,
+.blue {
+    color: #4919f7;
+}
+
+.btnB a,
+.red {
+    color: #f51313;
+}
+
+nav section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+section a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding: 10px;
+}
+
+.btnRM a:hover,
+.btnB a:hover {
+    color: #fff;
+}
+
+section a:hover {
+    text-shadow: 0 2px 4px #62cafa;
+    color: #f51313;
+    border-color: #4919f7;
+}
+
+nav .btn {
+    margin: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* -------hamburgur button */
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    display: none;
+}
+
+.menu-btn_burgur {
+    width: 40px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_burgur::before,
+.menu-btn_burgur::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_burgur::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn_burgur::after {
+    transform: translateY(10px);
+}
+
+
+/* animation */
+
+.menu-btn.open .menu-btn_burgur {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burgur::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burgur::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+/* ----------navbar end-------------------- */
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("https://images.unsplash.com/photo-1545623703-583dd2364bbd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main h1,
+h4,
+p {
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 5px black;
+}
+
+main h1 {
+    margin: 10px 0;
+}
+
+main p {
+    margin-bottom: 5px;
+}
+
+p button {
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 5px black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 130px;
+    margin: 5px;
+}
+
+button a {
+    text-decoration: none;
+}
+
+.btnRM {
+    border: none;
+    color: #4919f7;
+    background: #ffffff2f;
+}
+
+.btnB {
+    border: none;
+    color: #f51313;
+    background: #ffffff2f;
+}
+
+.btnRM:focus,
+.btnB:focus {
+    outline: none;
+}
+
+.btnRM:hover {
+    color: #fff;
+    background-color: #4919f7;
+}
+
+.btnB:hover {
+    color: #fff;
+    background-color: #f51313;
+}
+
+.changetext::after {
+    content: '';
+    animation: change 10s infinite linear;
+    color: #62cafa;
+}
+
+@keyframes change {
+    0% {
+        content: 'BMW M 1000 RR';
+    }
+    20% {
+        content: 'BMW S 1000 RR';
+    }
+    40% {
+        content: 'BMW R 18';
+    }
+    60% {
+        content: 'BMW R 1250 GS';
+    }
+    80% {
+        content: 'BMW F 900 ';
+    }
+    100% {
+        content: 'BMW XR 1000';
+    }
+}
+
+
+/* ------------------all h3 heading----------------------*/
+
+h3,
+#service {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+/* -------------------galery----------------------------- */
+
+.container {
+    display: flex;
+    width: 90vw;
+    padding: 20px;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease-in 0.4s;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    letter-spacing: 2px;
+}
+
+
+/* ----------------------about us------------------------- */
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.card div {
+    width: 50%;
+    padding: 30px;
+}
+
+.card div h3 {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card div p {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+
+/* --------------------callections------------ */
+
+.calection {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding: 40px;
+}
+
+.calection h3 {
+    width: 100%;
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.calection .bikes {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    width: 20vw;
+    margin: 20px;
+    height: 20vh;
+    border-radius: 5px;
+    background-image: url("https://wallpapercave.com/wp/wp2499072.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding: 10px;
+}
+
+.calection .bikes-1 {
+    background-image: url("https://bd.gaadicdn.com/processedimages/bmw/s1000rr/source/v_s1000rr-pro-m-sport1561625847.jpg");
+}
+
+.calection .bikes-2 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/BMW_R18_First_Edition_front_left_DSC_0272.jpg/300px-BMW_R18_First_Edition_front_left_DSC_0272.jpg");
+}
+
+.calection .bikes-3 {
+    background-image: url("https://static.autox.com/uploads/2020/04/2020-bmw-f-900r.jpg");
+}
+
+.calection .bikes-4 {
+    background-image: url("https://2yrh403fk8vd1hz9ro2n46dd-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/2018-bmw-s-1000-xr-buyers-guide-1.jpg");
+}
+
+.calection .bikes-5 {
+    background-image: url("https://images.hindustantimes.com/auto/img/2020/05/21/600x338/05_The_all-new_BMW_F_900_XR_1590049670074_1590049670579.JPG");
+}
+
+.calection .bikes-6 {
+    background-image: url("https://stat.overdrive.in/wp-content/uploads/2019/01/BMW-R-1200-GS-CES-2019-2.jpg");
+}
+
+.calection .bikes-7 {
+    background-image: url("https://static.autox.com/uploads/bikes/2019/08/bmw-r-1250-gs-adventure-18-jan-2019.jpg");
+}
+
+.calection .bikes-8 {
+    background-image: url("https://imgd.aeplcdn.com/393x221/bw/models/bmw-f850-gs-standard20200729233517.jpg?q=85");
+}
+
+.calection .bikes-9 {
+    background-image: url("https://stat.overdrive.in/wp-content/odgallery/2018/01/40308_2018-BMW-F-750-GS-images-1_468x263.jpg");
+}
+
+.calection .bikes-10 {
+    background-image: url("https://www.webbikeworld.com/wp-content/uploads/2019/12/2020-BWM-G310GS-01.jpg");
+}
+
+.calection .bikes-11 {
+    background-image: url("https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3a%2f%2fcdni.autocarindia.com%2fExtraImages%2f20180720060358_BMW-G-310-R-front-action-1.jpg&h=795&w=1200&c=1");
+}
+
+
+/* --------------------service--------------------------- */
+
+.service {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+}
+
+.man,
+.ser,
+.race {
+    padding: 20px;
+    background-color: #fffbfb2f;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.man h5,
+.ser h5,
+.race h5,
+.adv h5 {
+    padding: 15px;
+    text-align: center;
+    color: #dad8d8;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    letter-spacing: 3px;
+}
+
+.man p,
+.ser p,
+.race p,
+.adv p {
+    text-align: justify;
+    letter-spacing: 2px;
+    color: #9b9999;
+}
+
+
+/* ----------------------------------footer--------------------------------- */
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #4d4c4c;
+}
+
+.list ul {
+    list-style: none;
+}
+
+.list ul li {
+    padding: 5px;
+    color: #cfcccc;
+    word-spacing: 3px;
+}
+
+.copy h5 {
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    padding: 5px;
+    background-color: #696565;
+    color: #cfcdcd;
+}
+
+.contact input,
+button {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #18f335;
+    border: none;
+}
+
+.contact input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.contact button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contact button:focus {
+    outline: none;
+}
+
+.contact button:hover {
+    background-color: #18f335;
+    color: #fff;
+}
+
+#icon {
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+
+/* --------------------Media Query--------------------- */
+
+
+/* 480px */
+
+@media (max-width: 480px) {
+    /* navbar */
+    .menu-btn {
+        display: inline-block;
+    }
+    nav {
+        position: fixed;
+        flex-direction: column;
+        padding: 0;
+    }
+    nav h1 {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    nav section {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #201c1c;
+    }
+    section a {
+        display: block;
+        border: none;
+    }
+    nav section.active {
+        display: block;
+    }
+    /* navbar end */
+    /* header main */
+    header {
+        width: 100vw;
+        height: 100vh;
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+    main h1,
+    h4,
+    p {
+        letter-spacing: 0px;
+    }
+    main h1 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    main p {
+        margin-bottom: 5px;
+    }
+    /* header main end */
+    /* gallery */
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+    /* gallery end */
+    /* about */
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card div {
+        width: 80%;
+        padding: 10px;
+    }
+    .card div p {
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 30px;
+    }
+    /* about end */
+    /* bike Portfolio */
+    .calection .bikes {
+        width: 80vw;
+        margin: 10px;
+        height: 40vh;
+    }
+    /* bike Portfolio end */
+    /* service */
+    .service {
+        flex-direction: column;
+    }
+    /* service end */
+    /* footer */
+    .footer {
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .list ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .copy h5 {
+        letter-spacing: 2px;
+        word-spacing: 3px;
+    }
+    .contact input {
+        margin-left: 20px;
+    }
+    /* footer end*/
+}
+
+
+/* 580px */
+
+@media (max-width: 580px) {
+    /* navbar */
+    .menu-btn {
+        display: inline-block;
+    }
+    nav {
+        position: fixed;
+        flex-direction: column;
+        padding: 0;
+    }
+    nav h1 {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    nav section {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #201c1c;
+    }
+    section a {
+        display: block;
+        border: none;
+    }
+    nav section.active {
+        display: block;
+    }
+    /* navbar end */
+    /* header main */
+    header {
+        width: 100vw;
+        height: 100vh;
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+    main h1,
+    h4,
+    p {
+        letter-spacing: 0px;
+    }
+    main h1 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    main p {
+        margin-bottom: 5px;
+    }
+    /* header main end */
+    /* gallery */
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+    /* gallery end */
+    /* about */
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card div {
+        width: 80%;
+        padding: 10px;
+    }
+    .card div p {
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 30px;
+    }
+    /* about end */
+    /* bike Portfolio */
+    .calection .bikes {
+        width: 80vw;
+        margin: 10px;
+        height: 40vh;
+    }
+    /* bike Portfolio end */
+    /* service */
+    .service {
+        flex-direction: column;
+    }
+    /* service end */
+    /* footer */
+    .footer {
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .list ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .copy h5 {
+        letter-spacing: 2px;
+        word-spacing: 3px;
+    }
+    .contact input {
+        margin-left: 20px;
+    }
+    /* footer end*/
+}
+
+
+/* 680px */
+
+@media (max-width: 680px) {
+    /* navbar */
+    .menu-btn {
+        display: inline-block;
+    }
+    nav {
+        position: fixed;
+        flex-direction: column;
+        padding: 0;
+    }
+    nav h1 {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    nav section {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #201c1c;
+    }
+    section a {
+        display: block;
+        border: none;
+    }
+    nav section.active {
+        display: block;
+    }
+    /* navbar end */
+    /* header main */
+    header {
+        width: 100vw;
+        height: 100vh;
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+    main h1,
+    h4,
+    p {
+        letter-spacing: 0px;
+    }
+    main h1 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    main p {
+        margin-bottom: 5px;
+    }
+    /* header main end */
+    /* gallery */
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+    /* gallery end */
+    /* about */
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card div {
+        width: 80%;
+        padding: 10px;
+    }
+    .card div p {
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 30px;
+    }
+    /* about end */
+    /* bike Portfolio */
+    .calection .bikes {
+        width: 80vw;
+        margin: 10px;
+        height: 40vh;
+    }
+    /* bike Portfolio end */
+    /* service */
+    .service {
+        flex-direction: column;
+    }
+    /* service end */
+    /* footer */
+    .footer {
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .list ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .copy h5 {
+        letter-spacing: 2px;
+        word-spacing: 3px;
+    }
+    .contact input {
+        margin-left: 20px;
+    }
+    /* footer end*/
+}
