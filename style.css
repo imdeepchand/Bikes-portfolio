@@ -81,7 +81,7 @@ section a:hover {
 }
 
 nav .btn {
-    margin: 30px;
+    margin: 25px 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -525,6 +525,10 @@ button {
 /* 480px */
 
 @media (max-width: 480px) {
+    header {
+        width: 100vw;
+        height: 100vh;
+    }
     /* navbar */
     .menu-btn {
         display: inline-block;
@@ -638,6 +642,10 @@ button {
 /* 580px */
 
 @media (max-width: 580px) {
+    header {
+        width: 100vw;
+        height: 100vh;
+    }
     /* navbar */
     .menu-btn {
         display: inline-block;
@@ -751,6 +759,10 @@ button {
 /* 680px */
 
 @media (max-width: 680px) {
+    header {
+        width: 100vw;
+        height: 100vh;
+    }
     /* navbar */
     .menu-btn {
         display: inline-block;
